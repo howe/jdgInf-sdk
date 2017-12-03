@@ -19,7 +19,7 @@ import java.util.List;
 /**
  * Created on 2017/11/25
  *
- * @author Jianghao(howechiang@gmail.com)
+ * @author Jianghao(howechiang @ gmail.com)
  */
 public class GameUtil {
 

@@ -44,7 +44,7 @@
 
     <issueManagement>
         <system>Github Issue</system>
-        <url>http://github.com/howe/jdgApi-sdk/issues</url>
+        <url>http://github.com/howe/jdgInf-sdk/issues</url>
     </issueManagement>
     <licenses>
         <license>
@@ -62,9 +62,9 @@
     </developers>
 
     <scm>
-        <connection>scm:git:git://github.com/howe/jdgApi-sdk.git</connection>
-        <developerConnection>scm:git:git://github.com/howe/jdgApi-sdk.git</developerConnection>
-        <url>git://github.com/howe/jdgApi-sdk.git</url>
+        <connection>scm:git:git://github.com/howe/jdgInf-sdk.git</connection>
+        <developerConnection>scm:git:git://github.com/howe/jdgInf-sdk.git</developerConnection>
+        <url>git://github.com/howe/jdgInf-sdk.git</url>
     </scm>
 
     <distributionManagement>
