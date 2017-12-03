@@ -52,16 +52,19 @@ public class Dict {
      * 9 已撤销
      * 10 已仲裁
      * 11 强制仲裁
+     * 12 申述中（服务商申述）
+     * 13 已完成
      * 88 已结算
-     * 99 已完成
+     * 99 已完结
      */
-    public static final Integer ORDERSTATUS_ARRAY[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 88, 99};
+    public static final Integer ORDERSTATUS_ARRAY[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 88, 99};
 
     public static final String OPERATIONTYPE_ARRAY[] = {"OP_LOCK", "OP_UNLOCK",
             "OP_APPLY_ACCEPTANCE", "OP_CANCEL_ACCEPTANCE", "OP_COMPLETE_ACCEPTANCE",
             "OP_APPLY_CANCELLATION", "OP_CANCELL_CANCELLATION", "OP_AGREE_WITHDRAW",
             "OP_APPLY_ARBITRATION", "OP_CANCEL_ARBITRATION", "OP_ABNORMAL_EXCEPTION",
             "OP_CANCEL_EXCEPTION", "OP_STOPPAGE_TIME", "OP_FILLING_MONEY", "OP_CORRECT_PASSWORD"};
+
     /**
      * 锁定账号
      */
@@ -122,4 +125,83 @@ public class Dict {
      * 修正密码
      */
     public static final String OPERATIONTYPE_OP_CORRECT_PASSWORD = "OP_CORRECT_PASSWORD";
+
+    /**
+     * 已取消
+     */
+    public static final Integer ORDERSTATUS_CANCELLED = 0;
+
+    /**
+     * 已下单（未接手）
+     */
+    public static final Integer ORDERSTATUS_ALREADY_ORDERED = 1;
+    /**
+     * 处理中（代练中）
+     */
+    public static final Integer ORDERSTATUS_PROCESSING = 2;
+
+    /**
+     * 待验收
+     */
+    public static final Integer ORDERSTATUS_TO_BE_ACCEPTED = 3;
+
+    /**
+     * 撤销中
+     */
+    public static final Integer ORDERSTATUS_CANCELLATION = 4;
+
+    /**
+     * 仲裁中
+     */
+    public static final Integer ORDERSTATUS_ARBITRATION = 5;
+
+    /**
+     * 异常
+     */
+    public static final Integer ORDERSTATUS_EXCEPTION = 6;
+
+    /**
+     * 锁定
+     */
+    public static final Integer ORDERSTATUS_LOCKED = 7;
+
+    /**
+     * 已下架
+     */
+    public static final Integer ORDERSTATUS_OFF_SHELF = 8;
+
+    /**
+     * 已撤销
+     */
+    public static final Integer ORDERSTATUS_REVOKED = 9;
+
+    /**
+     * 已仲裁
+     */
+    public static final Integer ORDERSTATUS_ARBITRATED = 10;
+
+    /**
+     * 强制仲裁
+     */
+    public static final Integer ORDERSTATUS_MANDATORY_ARBITRATION = 11;
+
+    /**
+     * 已结算
+     */
+    public static final Integer ORDERSTATUS_SETTLED = 88;
+
+    /**
+     * 申述中
+     */
+    public static final Integer ORDERSTATUS_REPRESENTATION = 12;
+
+    /**
+     * 已完成
+     */
+    public static final Integer ORDERSTATUS_COMPLETED = 13;
+
+    /**
+     * 已完成
+     */
+    public static final Integer ORDERSTATUS_FINISHED = 99;
 }
