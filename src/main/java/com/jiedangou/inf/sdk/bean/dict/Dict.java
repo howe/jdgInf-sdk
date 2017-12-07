@@ -12,6 +12,8 @@ public class Dict {
     public static String JDG_API_VERSION = "1.0";
     public static String JDG_API_ACTION_GAME_QUERYGAMELIST = "/game/queryGameList.htm";
     public static String JDG_API_ACTION_GAME_QUERYGAMEDETAIL = "/game/queryGame.htm";
+    public static String JDG_API_ACTION_ORDER_GETNEWORDERLIST = "/order/getNewOrderList.htm";
+    public static String JDG_API_ACTION_ORDER_ACCEPTORDER = "/order/acceptOrder.htm";
 
     /**
      * 订单类型
