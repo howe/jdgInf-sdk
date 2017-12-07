@@ -1,4 +1,4 @@
-package com.jiedangou.api.sdk.bean.param.biz;
+package com.jiedangou.inf.sdk.bean.param.biz;
 
 
 /**

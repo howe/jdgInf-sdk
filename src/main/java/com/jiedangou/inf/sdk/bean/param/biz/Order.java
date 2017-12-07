@@ -1,9 +1,9 @@
-package com.jiedangou.api.sdk.bean.param.biz;
+package com.jiedangou.inf.sdk.bean.param.biz;
 
-import com.jiedangou.api.sdk.bean.dict.Dict;
-import com.jiedangou.api.sdk.bean.param.pro.Account;
-import com.jiedangou.api.sdk.bean.param.pro.Contact;
-import com.jiedangou.api.sdk.bean.param.pro.OMessage;
+import com.jiedangou.inf.sdk.bean.dict.Dict;
+import com.jiedangou.inf.sdk.bean.param.pro.Account;
+import com.jiedangou.inf.sdk.bean.param.pro.Contact;
+import com.jiedangou.inf.sdk.bean.param.pro.OMessage;
 import org.nutz.json.JsonField;
 
 import java.util.Date;

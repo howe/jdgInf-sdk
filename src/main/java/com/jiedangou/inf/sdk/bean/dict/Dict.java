@@ -1,4 +1,4 @@
-package com.jiedangou.api.sdk.bean.dict;
+package com.jiedangou.inf.sdk.bean.dict;
 
 /**
  * Created on 2017/11/25

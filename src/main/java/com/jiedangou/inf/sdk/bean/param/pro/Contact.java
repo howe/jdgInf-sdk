@@ -1,4 +1,4 @@
-package com.jiedangou.api.sdk.bean.param.pro;
+package com.jiedangou.inf.sdk.bean.param.pro;
 
 /**
  * 联系方式

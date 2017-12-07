@@ -1,4 +1,4 @@
-package com.jiedangou.api.sdk.bean.param.req;
+package com.jiedangou.inf.sdk.bean.param.req;
 
 import org.nutz.lang.util.NutMap;
 

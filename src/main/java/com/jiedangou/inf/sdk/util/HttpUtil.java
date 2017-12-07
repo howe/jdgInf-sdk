@@ -1,4 +1,4 @@
-package com.jiedangou.api.sdk.util;
+package com.jiedangou.inf.sdk.util;
 
 import org.nutz.http.*;
 import org.nutz.lang.Lang;

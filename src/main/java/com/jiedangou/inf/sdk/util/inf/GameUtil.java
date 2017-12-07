@@ -1,11 +1,11 @@
-package com.jiedangou.api.sdk.util.inf;
+package com.jiedangou.inf.sdk.util.inf;
 
-import com.jiedangou.api.sdk.bean.dict.Dict;
-import com.jiedangou.api.sdk.bean.param.biz.Game;
-import com.jiedangou.api.sdk.bean.param.req.BaseReq;
-import com.jiedangou.api.sdk.bean.param.resp.BaseResp;
-import com.jiedangou.api.sdk.util.HttpUtil;
-import com.jiedangou.api.sdk.util.JdgUtil;
+import com.jiedangou.inf.sdk.bean.dict.Dict;
+import com.jiedangou.inf.sdk.bean.param.biz.Game;
+import com.jiedangou.inf.sdk.bean.param.req.BaseReq;
+import com.jiedangou.inf.sdk.bean.param.resp.BaseResp;
+import com.jiedangou.inf.sdk.util.HttpUtil;
+import com.jiedangou.inf.sdk.util.JdgUtil;
 import org.nutz.json.Json;
 import org.nutz.lang.Lang;
 import org.nutz.lang.Strings;

@@ -1,7 +1,7 @@
-package com.jiedangou.api.sdk.util;
+package com.jiedangou.inf.sdk.util;
 
-import com.jiedangou.api.sdk.bean.param.pro.Account;
-import com.jiedangou.api.sdk.bean.param.pro.Contact;
+import com.jiedangou.inf.sdk.bean.param.pro.Account;
+import com.jiedangou.inf.sdk.bean.param.pro.Contact;
 import org.nutz.lang.Encoding;
 import org.nutz.lang.Lang;
 import org.nutz.lang.Strings;
