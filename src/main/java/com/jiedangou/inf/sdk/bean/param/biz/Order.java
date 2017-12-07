@@ -314,14 +314,14 @@ public class Order {
      * 任务接手时间
      */
     @JsonField(dataFormat = Dict.DATE_FORMART_FULL)
-    private Date plTakeTime;
+    private Date plAcceptTime;
 
-    public Date getPlTakeTime() {
-        return plTakeTime;
+    public Date getPlAcceptTime() {
+        return plAcceptTime;
     }
 
-    public void setPlTakeTime(Date plTakeTime) {
-        this.plTakeTime = plTakeTime;
+    public void setPlAcceptTime(Date plAcceptTime) {
+        this.plAcceptTime = plAcceptTime;
     }
 
     /**
