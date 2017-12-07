@@ -11,7 +11,7 @@ import java.util.Date;
  *
  * @howechiang
  */
-public class OrderMessage {
+public class OMessage {
 
     /**
      * 留言时间

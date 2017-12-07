@@ -1,22 +1,17 @@
 package com.jiedangou.api.sdk.util;
 
 import org.nutz.http.*;
-import org.nutz.json.Json;
 import org.nutz.lang.Lang;
 import org.nutz.lang.Strings;
-import org.nutz.log.Log;
-import org.nutz.log.Logs;
 
 import java.util.Map;
 
 /**
  * Created on 2017/11/19
  *
- * @author Jianghao(howechiang@gmail.com)
+ * @author Jianghao(howechiang @ gmail.com)
  */
 public class HttpUtil {
-
-    protected static final Log log = Logs.get();
 
     /**
      * 普通Get请求
@@ -26,14 +21,16 @@ public class HttpUtil {
      */
     public static String get(String url) {
 
-        if (Strings.isBlank(url)) {
-            log.error("url为空");
+        try {
+            if (Strings.isBlank(url)) {
+                throw new Exception("url为空");
+            } else if (!Strings.isUrl(url)) {
+                throw new Exception("url格式不正确");
+            } else {
+                return Http.get(url).getContent();
+            }
+        } catch (Exception e) {
             return null;
-        } else if (!Strings.isUrl(url)) {
-            log.error("url格式不正确");
-            return null;
-        } else {
-            return Http.get(url).getContent();
         }
     }
 
@@ -47,17 +44,18 @@ public class HttpUtil {
 
     public static String post(String url, Map<String, Object> parms) {
 
-        if (Strings.isBlank(url)) {
-            log.error("url为空");
+        try {
+            if (Strings.isBlank(url)) {
+                throw new Exception("url为空");
+            } else if (!Strings.isUrl(url)) {
+                throw new Exception("url格式不正确");
+            } else if (parms.isEmpty()) {
+                throw new Exception("parms为空");
+            } else {
+                return Http.post(url, parms, 10000);
+            }
+        } catch (Exception e) {
             return null;
-        } else if (!Strings.isUrl(url)) {
-            log.error("url格式不正确");
-            return null;
-        } else if (parms.isEmpty()) {
-            log.error("parms为空");
-            return null;
-        } else {
-            return Http.post(url, parms, 10000);
         }
     }
 
@@ -69,14 +67,16 @@ public class HttpUtil {
      */
     public static String post(String url) {
 
-        if (Strings.isBlank(url)) {
-            log.error("url为空");
+        try {
+            if (Strings.isBlank(url)) {
+                throw new Exception("url为空");
+            } else if (!Strings.isUrl(url)) {
+                throw new Exception("url格式不正确");
+            } else {
+                return Http.post(url, null, 10000);
+            }
+        } catch (Exception e) {
             return null;
-        } else if (!Strings.isUrl(url)) {
-            log.error("url格式不正确");
-            return null;
-        } else {
-            return Http.post(url, null, 10000);
         }
     }
 
@@ -90,23 +90,22 @@ public class HttpUtil {
      */
     public static String post(String url, Header header, Map<String, Object> parms) {
 
-        if (Strings.isBlank(url)) {
-            log.error("url为空");
+        try {
+            if (Strings.isBlank(url)) {
+                throw new Exception("url为空");
+            } else if (!Strings.isUrl(url)) {
+                throw new Exception("url格式不正确");
+            } else if (Lang.isEmpty(header)) {
+                throw new Exception("header为空");
+            } else if (header.getAll().isEmpty()) {
+                throw new Exception("header为空");
+            } else if (parms.isEmpty()) {
+                throw new Exception("parms为空");
+            } else {
+                return Http.post3(url, parms, header, 10000).getContent();
+            }
+        } catch (Exception e) {
             return null;
-        } else if (!Strings.isUrl(url)) {
-            log.error("url格式不正确");
-            return null;
-        } else if (Lang.isEmpty(header)) {
-            log.error("header为空");
-            return null;
-        } else if (header.getAll().isEmpty()) {
-            log.error("header为空");
-            return null;
-        } else if (parms.isEmpty()) {
-            log.error("parms为空");
-            return null;
-        } else {
-            return Http.post3(url, parms, header, 10000).getContent();
         }
     }
 
@@ -119,20 +118,20 @@ public class HttpUtil {
      */
     public static String get(String url, Header header) {
 
-        if (Strings.isBlank(url)) {
-            log.error("url为空");
+        try {
+            if (Strings.isBlank(url)) {
+                throw new Exception("url为空");
+            } else if (!Strings.isUrl(url)) {
+                throw new Exception("url格式不正确");
+            } else if (Lang.isEmpty(header)) {
+                throw new Exception("header为空");
+            } else if (header.getAll().isEmpty()) {
+                throw new Exception("header为空");
+            } else {
+                return Http.get(url, header, 10000).getContent();
+            }
+        } catch (Exception e) {
             return null;
-        } else if (!Strings.isUrl(url)) {
-            log.error("url格式不正确");
-            return null;
-        } else if (Lang.isEmpty(header)) {
-            log.error("header为空");
-            return null;
-        } else if (header.getAll().isEmpty()) {
-            log.error("header为空");
-            return null;
-        } else {
-            return Http.get(url, header, 10000).getContent();
         }
     }
 
@@ -143,17 +142,14 @@ public class HttpUtil {
      * @param json
      * @return
      */
-    public static String post(String url, String json) {
+    public static String post(String url, String json) throws Exception {
 
         if (Strings.isBlank(url)) {
-            log.error("url为空");
-            return null;
+            throw new Exception("url为空");
         } else if (!Strings.isUrl(url)) {
-            log.error("url格式不正确");
-            return null;
+            throw new Exception("url格式不正确");
         } else if (Lang.isEmpty(json)) {
-            log.error("json为空");
-            return null;
+            throw new Exception("json为空");
         } else {
             Request req = Request.create(url, Request.METHOD.POST);
             req.getHeader().set("Content-Type", "application/json;charset=UTF-8");
@@ -170,17 +166,14 @@ public class HttpUtil {
      * @param xml
      * @return
      */
-    public static String postXml(String url, String xml) {
+    public static String postXml(String url, String xml) throws Exception {
 
         if (Strings.isBlank(url)) {
-            log.error("url为空");
-            return null;
+            throw new Exception("url为空");
         } else if (!Strings.isUrl(url)) {
-            log.error("url格式不正确");
-            return null;
+            throw new Exception("url格式不正确");
         } else if (Lang.isEmpty(xml)) {
-            log.error("xml为空");
-            return null;
+            throw new Exception("xml为空");
         } else {
             return Http.postXML(url, xml, 10000).getContent();
         }
