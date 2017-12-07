@@ -50,7 +50,7 @@ public class OrderUtil {
             req.setBizData(map);
             req.setSign(Lang.md5(JdgUtil.buildParmas(Lang.obj2nutmap(req), new String[]{"sign"}) + key));
 
-            String json = HttpUtil.post(Dict.JDG_API_HOST + Dict.JDG_API_ACTION_GAME_QUERYGAMEDETAIL, Json.toJson(req));
+            String json = HttpUtil.post(Dict.JDG_API_HOST + Dict.JDG_API_ACTION_ORDER_GETNEWORDERLIST, Json.toJson(req));
             if (Strings.isEmpty(json)) {
                 throw new Exception("返回值异常");
             } else {

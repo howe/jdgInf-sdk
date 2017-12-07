@@ -142,20 +142,24 @@ public class HttpUtil {
      * @param json
      * @return
      */
-    public static String post(String url, String json) throws Exception {
+    public static String post(String url, String json) {
 
-        if (Strings.isBlank(url)) {
-            throw new Exception("url为空");
-        } else if (!Strings.isUrl(url)) {
-            throw new Exception("url格式不正确");
-        } else if (Lang.isEmpty(json)) {
-            throw new Exception("json为空");
-        } else {
-            Request req = Request.create(url, Request.METHOD.POST);
-            req.getHeader().set("Content-Type", "application/json;charset=UTF-8");
-            req.setData(json);
-            Response resp = Sender.create(req).setTimeout(6000).send();
-            return resp.getContent();
+        try {
+            if (Strings.isBlank(url)) {
+                throw new Exception("url为空");
+            } else if (!Strings.isUrl(url)) {
+                throw new Exception("url格式不正确");
+            } else if (Lang.isEmpty(json)) {
+                throw new Exception("json为空");
+            } else {
+                Request req = Request.create(url, Request.METHOD.POST);
+                req.getHeader().set("Content-Type", "application/json;charset=UTF-8");
+                req.setData(json);
+                Response resp = Sender.create(req).setTimeout(6000).send();
+                return resp.getContent();
+            }
+        } catch (Exception e) {
+            return null;
         }
     }
 
@@ -166,16 +170,19 @@ public class HttpUtil {
      * @param xml
      * @return
      */
-    public static String postXml(String url, String xml) throws Exception {
-
-        if (Strings.isBlank(url)) {
-            throw new Exception("url为空");
-        } else if (!Strings.isUrl(url)) {
-            throw new Exception("url格式不正确");
-        } else if (Lang.isEmpty(xml)) {
-            throw new Exception("xml为空");
-        } else {
-            return Http.postXML(url, xml, 10000).getContent();
+    public static String postXml(String url, String xml) {
+        try {
+            if (Strings.isBlank(url)) {
+                throw new Exception("url为空");
+            } else if (!Strings.isUrl(url)) {
+                throw new Exception("url格式不正确");
+            } else if (Lang.isEmpty(xml)) {
+                throw new Exception("xml为空");
+            } else {
+                return Http.postXML(url, xml, 10000).getContent();
+            }
+        } catch (Exception e) {
+            return null;
         }
     }
 }
