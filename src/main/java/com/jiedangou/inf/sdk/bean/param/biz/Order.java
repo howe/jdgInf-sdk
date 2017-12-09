@@ -61,18 +61,19 @@ public class Order {
      * 订单状态
      * 0 已取消
      * 1 已下单（未接手）
-     * 2 处理中（代练中）
-     * 3 待验收
-     * 4 撤销中
-     * 5 仲裁中
-     * 6 异常
-     * 7 锁定
-     * 8 已下架
-     * 9 已撤销
-     * 10 已仲裁
-     * 11 强制仲裁
-     * 12 申述中（服务商申述）
-     * 13 已完成
+     * 2 已接单（未处理）
+     * 3 处理中（代练中）
+     * 4 待验收
+     * 5 撤销中
+     * 6 仲裁中
+     * 7 异常
+     * 8 锁定
+     * 9 已下架
+     * 10 已撤销
+     * 11 已仲裁
+     * 12 强制仲裁
+     * 13 申述中（服务商申述）
+     * 14 已完成
      * 88 已结算
      * 99 已完结
      */
@@ -322,6 +323,20 @@ public class Order {
 
     public void setPlAcceptTime(Date plAcceptTime) {
         this.plAcceptTime = plAcceptTime;
+    }
+
+    /**
+     * 任务开始时间
+     */
+    @JsonField(dataFormat = Dict.DATE_FORMART_FULL)
+    private Date plStartTime;
+
+    public Date getPlStartTime() {
+        return plStartTime;
+    }
+
+    public void setPlStartTime(Date plStartTime) {
+        this.plStartTime = plStartTime;
     }
 
     /**
