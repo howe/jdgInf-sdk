@@ -329,14 +329,14 @@ public class Order {
      * 任务开始时间
      */
     @JsonField(dataFormat = Dict.DATE_FORMART_FULL)
-    private Date plStartTime;
+    private Date plBeginTime;
 
-    public Date getPlStartTime() {
-        return plStartTime;
+    public Date getPlBeginTime() {
+        return plBeginTime;
     }
 
-    public void setPlStartTime(Date plStartTime) {
-        this.plStartTime = plStartTime;
+    public void setPlBeginTime(Date plBeginTime) {
+        this.plBeginTime = plBeginTime;
     }
 
     /**
