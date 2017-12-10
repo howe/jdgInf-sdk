@@ -3,6 +3,7 @@ package com.jiedangou.inf.sdk.util.inf;
 import com.jiedangou.inf.sdk.bean.dict.Dict;
 import com.jiedangou.inf.sdk.bean.param.biz.Game;
 import com.jiedangou.inf.sdk.bean.param.req.BaseReq;
+import com.jiedangou.inf.sdk.bean.param.req.biz.QueryGame;
 import com.jiedangou.inf.sdk.bean.param.resp.BaseResp;
 import com.jiedangou.inf.sdk.util.HttpUtil;
 import com.jiedangou.inf.sdk.util.JdgUtil;
@@ -40,7 +41,7 @@ public class GameUtil {
                 req.setProviderId(providerId);
                 req.setTimestamp(Times.getTS());
                 req.setVersion(Dict.JDG_API_VERSION);
-                req.setSign(Lang.md5(JdgUtil.buildParmas(Lang.obj2nutmap(req), new String[]{"sign"}) + key));
+                req.setSign(JdgUtil.getSign(Lang.obj2nutmap(req), key));
                 String json = HttpUtil.post(Dict.JDG_API_HOST + Dict.JDG_API_ACTION_GAME_QUERYGAMELIST, Json.toJson(req));
                 if (Strings.isEmpty(json)) {
                     throw new Exception("返回值异常");
@@ -62,22 +63,22 @@ public class GameUtil {
      * @param key        密钥key
      * @return
      */
-    public static Game queryGame(Integer providerId, String key, Integer gameId) {
+    public static Game queryGame(Integer providerId, String key, QueryGame biz) {
 
         try {
             if (Lang.isEmpty(providerId)) {
                 throw new Exception("服务商ID为空");
             } else if (Strings.isBlank(key)) {
                 throw new Exception("key为空");
-            } else if (Lang.isEmpty(gameId)) {
+            } else if (Lang.isEmpty(biz.getGameId())) {
                 throw new Exception("gameId为空");
             } else {
                 BaseReq req = new BaseReq();
                 req.setProviderId(providerId);
                 req.setTimestamp(Times.getTS());
                 req.setVersion(Dict.JDG_API_VERSION);
-                req.setBizData(new NutMap("gameId", gameId));
-                req.setSign(Lang.md5(JdgUtil.buildParmas(Lang.obj2nutmap(req), new String[]{"sign"}) + key));
+                req.setBizData(Lang.obj2nutmap(biz));
+                req.setSign(JdgUtil.getSign(Lang.obj2nutmap(req), key));
                 String json = HttpUtil.post(Dict.JDG_API_HOST + Dict.JDG_API_ACTION_GAME_QUERYGAMEDETAIL, Json.toJson(req));
                 if (Strings.isEmpty(json)) {
                     throw new Exception("返回值异常");
