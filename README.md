@@ -1,5 +1,5 @@
 # jdgInf-sdk
-接单狗接口-SDK
+接单狗对接接口（服务商）-SDK
 
 ```
 <repositories>
