@@ -9,6 +9,7 @@ public class Dict {
 
     public static final String DATE_FORMART_FULL = "yyyy-MM-dd HH:mm:ss";
     public static String JDG_API_HOST = "https://inf.jiedangou.com";
+    public static String JDG_DEV_API_HOST = "https://inf.dev.jiedangou.com";
     public static String JDG_API_VERSION = "1.0";
     public static String JDG_API_ACTION_GAME_QUERYGAMELIST = "/game/queryGameList.htm";
     public static String JDG_API_ACTION_GAME_QUERYGAMEDETAIL = "/game/queryGame.htm";
