@@ -203,7 +203,33 @@ public class JdgUtil {
     public static Boolean checkSign(NutMap params, String key) {
 
         try {
-            String sign = params.getString("sign");
+            if (Lang.isEmpty(params)) {
+                throw new Exception("params参数为空");
+            } else if (Strings.isBlank(key)) {
+                throw new Exception("key密钥为空");
+            } else {
+                if (Strings.equalsIgnoreCase(Lang.md5(Url.encode(buildParmas(params, new String[]{"sign"})) + key), params.getString("sign"))) {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    /**
+     * 校验签名
+     *
+     * @param params
+     * @param key
+     * @param sign
+     * @return
+     */
+    public static Boolean checkSign(NutMap params, String key, String sign) {
+
+        try {
             if (Lang.isEmpty(params)) {
                 throw new Exception("params参数为空");
             } else if (Strings.isBlank(key)) {
@@ -353,6 +379,7 @@ public class JdgUtil {
 
     /**
      * 生成签名
+     *
      * @param map 加密对象
      * @param key 密钥
      * @return
