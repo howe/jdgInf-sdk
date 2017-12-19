@@ -36,4 +36,13 @@ public class GetNewOrderList {
     public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
     }
+
+    public GetNewOrderList(Integer gameId, Integer pageNumber, Integer pageSize) {
+        this.gameId = gameId;
+        this.pageNumber = pageNumber;
+        this.pageSize = pageSize;
+    }
+
+    public GetNewOrderList() {
+    }
 }

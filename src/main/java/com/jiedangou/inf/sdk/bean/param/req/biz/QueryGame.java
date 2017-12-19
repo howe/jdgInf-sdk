@@ -20,4 +20,7 @@ public class QueryGame {
     public QueryGame(Integer gameId) {
         this.gameId = gameId;
     }
+
+    public QueryGame() {
+    }
 }
