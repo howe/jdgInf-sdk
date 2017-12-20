@@ -87,6 +87,16 @@ public class Order {
         this.orderStatus = orderStatus;
     }
 
+    private Integer gameId;
+
+    public Integer getGameId() {
+        return gameId;
+    }
+
+    public void setGameId(Integer gameId) {
+        this.gameId = gameId;
+    }
+
     /**
      * 游戏名称
      */
@@ -98,6 +108,16 @@ public class Order {
 
     public void setGameName(String gameName) {
         this.gameName = gameName;
+    }
+
+    private Integer channelId;
+
+    public Integer getChannelId() {
+        return channelId;
+    }
+
+    public void setChannelId(Integer channelId) {
+        this.channelId = channelId;
     }
 
     /**
@@ -124,6 +144,16 @@ public class Order {
 
     public void setServerName(String serverName) {
         this.serverName = serverName;
+    }
+
+    private Integer serverId;
+
+    public Integer getServerId() {
+        return serverId;
+    }
+
+    public void setServerId(Integer serverId) {
+        this.serverId = serverId;
     }
 
     /**
