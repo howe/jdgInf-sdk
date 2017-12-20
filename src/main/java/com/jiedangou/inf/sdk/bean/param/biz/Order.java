@@ -30,6 +30,16 @@ public class Order {
         this.orderNum = orderNum;
     }
 
+    private Integer partnerId;
+
+    public Integer getPartnerId() {
+        return partnerId;
+    }
+
+    public void setPartnerId(Integer partnerId) {
+        this.partnerId = partnerId;
+    }
+
     /**
      * 服务商订单号
      */
