@@ -16,6 +16,7 @@ public class Dict {
     public static String JDG_API_ACTION_ORDER_GETNEWORDERLIST = "/order/getNewOrderList.htm";
     public static String JDG_API_ACTION_ORDER_ACCEPTORDER = "/order/acceptOrder.htm";
     public static String JDG_API_ACTION_ORDER_FETCHORDER = "/order/fetchOrder.htm";
+    public static String JDG_API_ACTION_SYS_QUERYMARGIN = "/sys/queryMargin.htm";
 
     /**
      * 订单类型
