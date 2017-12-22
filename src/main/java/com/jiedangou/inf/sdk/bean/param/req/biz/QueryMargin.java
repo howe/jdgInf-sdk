@@ -16,4 +16,11 @@ public class QueryMargin {
     public void setPayPassword(String payPassword) {
         this.payPassword = payPassword;
     }
+
+    public QueryMargin() {
+    }
+
+    public QueryMargin(String payPassword) {
+        this.payPassword = payPassword;
+    }
 }
