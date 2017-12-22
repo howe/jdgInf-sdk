@@ -16,4 +16,11 @@ public class FetchOrder {
     public void setOrderNum(String orderNum) {
         this.orderNum = orderNum;
     }
+
+    public FetchOrder(String orderNum) {
+        this.orderNum = orderNum;
+    }
+
+    public FetchOrder() {
+    }
 }
