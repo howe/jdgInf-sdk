@@ -129,7 +129,7 @@ public class OrderUtil {
             req.setVersion(Dict.JDG_API_VERSION);
             req.setBizData(Lang.obj2nutmap(biz));
             req.setSign(JdgUtil.getSign(Lang.obj2nutmap(req), key));
-            String json = HttpUtil.post(Dict.JDG_DEV_API_HOST + Dict.JDG_API_ACTION_ORDER_ACCEPTORDER, Json.toJson(req));
+            String json = HttpUtil.post(Dict.JDG_DEV_API_HOST + Dict.JDG_API_ACTION_ORDER_FETCHORDER, Json.toJson(req));
             if (Strings.isEmpty(json)) {
                 throw new Exception("返回值异常");
             } else {
