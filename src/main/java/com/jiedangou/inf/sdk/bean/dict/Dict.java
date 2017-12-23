@@ -13,10 +13,18 @@ public class Dict {
     public static String JDG_API_VERSION = "1.0";
     public static String JDG_API_ACTION_GAME_QUERYGAMELIST = "/game/queryGameList.htm";
     public static String JDG_API_ACTION_GAME_QUERYGAMEDETAIL = "/game/queryGame.htm";
+
     public static String JDG_API_ACTION_ORDER_GETNEWORDERLIST = "/order/getNewOrderList.htm";
     public static String JDG_API_ACTION_ORDER_ACCEPTORDER = "/order/acceptOrder.htm";
     public static String JDG_API_ACTION_ORDER_FETCHORDER = "/order/fetchOrder.htm";
-    public static String JDG_API_ACTION_SYS_QUERYMARGIN = "/sys/queryMargin.htm";
+    public static String JDG_API_ACTION_ORDER_BEGINORDER = "/order/beginOrder.htm";
+    public static String JDG_API_ACTION_ORDER_ABNORMALORDER = "/order/abnormalOrder.htm";
+    public static String JDG_API_ACTION_ORDER_COMPLETEORDER = "/order/completeOrder.htm";
+    public static String JDG_API_ACTION_ORDER_REPEALORDER = "/order/repealOrder.htm";
+    public static String JDG_API_ACTION_ORDER_STATEORDER = "/order/stateOrder.htm";
+    public static String JDG_API_ACTION_ORDER_QUERYORDERLIST = "/order/queryOrderList.htm";
+
+    public static String JDG_API_ACTION_SYS_QUERYMARGIN = "/order/queryMargin.htm";
 
     /**
      * 订单类型
