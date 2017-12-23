@@ -24,6 +24,7 @@ public class Dict {
     public static String JDG_API_ACTION_ORDER_REPEALORDER = "/order/repealOrder.htm";
     public static String JDG_API_ACTION_ORDER_STATEORDER = "/order/stateOrder.htm";
     public static String JDG_API_ACTION_ORDER_QUERYORDERLIST = "/order/queryOrderList.htm";
+    public static String JDG_API_ACTION_ORDER_APPLYCANCELORDER = "/order/applycancelOrder.htm";
 
     public static String JDG_API_ACTION_SYS_QUERYMARGIN = "/order/queryMargin.htm";
 

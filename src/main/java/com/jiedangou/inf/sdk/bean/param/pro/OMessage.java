@@ -4,6 +4,7 @@ import com.jiedangou.inf.sdk.bean.dict.Dict;
 import org.nutz.json.JsonField;
 
 import java.util.Date;
+import java.util.List;
 
 /**
  * 订单留言
@@ -41,6 +42,19 @@ public class OMessage {
     }
 
     /**
+     * 图片地址列表
+     */
+    private List<String> pics;
+
+    public List<String> getPics() {
+        return pics;
+    }
+
+    public void setPics(List<String> pics) {
+        this.pics = pics;
+    }
+
+    /**
      * 来源
      * 1 系统
      * 2 客户
@@ -68,5 +82,16 @@ public class OMessage {
 
     public void setNickName(String nickName) {
         this.nickName = nickName;
+    }
+
+    public OMessage() {
+    }
+
+    public OMessage(String comments) {
+        this.comments = comments;
+    }
+
+    public OMessage(List<String> pics) {
+        this.pics = pics;
     }
 }

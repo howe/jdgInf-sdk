@@ -3,25 +3,13 @@ package com.jiedangou.inf.sdk.bean.param.req.biz;
 import com.jiedangou.inf.sdk.bean.param.pro.OMessage;
 
 /**
- * Created on 2017/12/10
+ * Created on 2017/12/23
  *
  * @author Jianghao(howechiang @ gmail.com)
  */
-public class RepealOrder {
+public class StateOrder {
 
     private String orderNum;
-
-    private Integer op;
-
-    private String payPassword;
-
-    public String getPayPassword() {
-        return payPassword;
-    }
-
-    public void setPayPassword(String payPassword) {
-        this.payPassword = payPassword;
-    }
 
     private OMessage om;
 
@@ -33,14 +21,6 @@ public class RepealOrder {
         this.orderNum = orderNum;
     }
 
-    public Integer getOp() {
-        return op;
-    }
-
-    public void setOp(Integer op) {
-        this.op = op;
-    }
-
     public OMessage getOm() {
         return om;
     }
@@ -49,12 +29,11 @@ public class RepealOrder {
         this.om = om;
     }
 
-    public RepealOrder(String orderNum, Integer op, OMessage om) {
+    public StateOrder(String orderNum, OMessage om) {
         this.orderNum = orderNum;
-        this.op = op;
         this.om = om;
     }
 
-    public RepealOrder() {
+    public StateOrder() {
     }
 }
