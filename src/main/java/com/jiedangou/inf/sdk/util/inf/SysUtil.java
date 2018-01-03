@@ -1,6 +1,7 @@
 package com.jiedangou.inf.sdk.util.inf;
 
 import com.jiedangou.inf.sdk.bean.dict.Dict;
+import com.jiedangou.inf.sdk.bean.param.biz.Provider;
 import com.jiedangou.inf.sdk.bean.param.req.BaseReq;
 import com.jiedangou.inf.sdk.bean.param.req.biz.QueryAccount;
 import com.jiedangou.inf.sdk.bean.param.req.biz.QueryMargin;
@@ -11,8 +12,6 @@ import org.nutz.json.Json;
 import org.nutz.lang.Lang;
 import org.nutz.lang.Strings;
 import org.nutz.lang.Times;
-
-import java.security.Provider;
 
 /**
  * Created by Jianghao on 2017/12/22
