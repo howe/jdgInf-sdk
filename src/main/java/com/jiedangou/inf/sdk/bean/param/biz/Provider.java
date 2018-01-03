@@ -1,16 +1,11 @@
 package com.jiedangou.inf.sdk.bean.param.biz;
 
-import org.nutz.dao.entity.annotation.Column;
-import org.nutz.dao.entity.annotation.Id;
-import org.nutz.dao.entity.annotation.Table;
-
 /**
  * 服务商表
  * Created by Jianghao on 2017/11/29
  *
  * @howechiang
  */
-@Table("service")
 public class Provider {
 
     /**
