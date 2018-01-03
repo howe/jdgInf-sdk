@@ -211,7 +211,7 @@ public class OrderUtil {
                 throw new Exception("返回值异常");
             } else {
                 BaseResp resp = Json.fromJson(BaseResp.class, json);
-                return resp.getStatus();
+                return resp.getMessage();
             }
         } catch (Exception e) {
             return null;
@@ -253,7 +253,7 @@ public class OrderUtil {
                 throw new Exception("返回值异常");
             } else {
                 BaseResp resp = Json.fromJson(BaseResp.class, json);
-                return resp.getStatus();
+                return resp.getMessage();
             }
         } catch (Exception e) {
             return null;
@@ -295,7 +295,7 @@ public class OrderUtil {
                 throw new Exception("返回值异常");
             } else {
                 BaseResp resp = Json.fromJson(BaseResp.class, json);
-                return resp.getStatus();
+                return resp.getMessage();
             }
         } catch (Exception e) {
             return null;
@@ -337,7 +337,7 @@ public class OrderUtil {
                 throw new Exception("返回值异常");
             } else {
                 BaseResp resp = Json.fromJson(BaseResp.class, json);
-                return resp.getStatus();
+                return resp.getMessage();
             }
         } catch (Exception e) {
             return null;
@@ -389,7 +389,7 @@ public class OrderUtil {
                 throw new Exception("返回值异常");
             } else {
                 BaseResp resp = Json.fromJson(BaseResp.class, json);
-                return resp.getStatus();
+                return resp.getMessage();
             }
         } catch (Exception e) {
             return null;
@@ -440,7 +440,7 @@ public class OrderUtil {
                 throw new Exception("返回值异常");
             } else {
                 BaseResp resp = Json.fromJson(BaseResp.class, json);
-                return resp.getStatus();
+                return resp.getMessage();
             }
         } catch (Exception e) {
             return null;
