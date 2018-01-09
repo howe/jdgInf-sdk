@@ -1,7 +1,7 @@
 package com.jiedangou.inf.sdk.util.inf;
 
 import com.jiedangou.inf.sdk.bean.dict.Dict;
-import com.jiedangou.inf.sdk.bean.param.biz.Order;
+import com.jiedangou.inf.sdk.bean.param.biz.PrOrder;
 import com.jiedangou.inf.sdk.bean.param.req.BaseReq;
 import com.jiedangou.inf.sdk.bean.param.req.biz.*;
 import com.jiedangou.inf.sdk.bean.param.resp.BaseResp;
@@ -51,7 +51,7 @@ public class OrderUtil {
                 throw new Exception("返回值异常");
             } else {
                 BaseResp resp = Json.fromJson(BaseResp.class, json);
-                List<Order> orders = resp.getData().getAsList("orders", Order.class);
+                List<PrOrder> orders = resp.getData().getAsList("orders", PrOrder.class);
                 Pager pager = resp.getData().getAs("pager", Pager.class);
                 return new QueryResult(orders, pager);
             }
@@ -87,7 +87,7 @@ public class OrderUtil {
                 throw new Exception("返回值异常");
             } else {
                 BaseResp resp = Json.fromJson(BaseResp.class, json);
-                List<Order> orders = resp.getData().getAsList("orders", Order.class);
+                List<PrOrder> orders = resp.getData().getAsList("orders", PrOrder.class);
                 Pager pager = resp.getData().getAs("pager", Pager.class);
                 return new QueryResult(orders, pager);
             }
@@ -104,7 +104,7 @@ public class OrderUtil {
      * @param biz
      * @return
      */
-    public static Order acceptOrder(Integer providerId, String key, AcceptOrder biz) {
+    public static PrOrder acceptOrder(Integer providerId, String key, AcceptOrder biz) {
 
         try {
 
@@ -128,7 +128,7 @@ public class OrderUtil {
                 throw new Exception("返回值异常");
             } else {
                 BaseResp resp = Json.fromJson(BaseResp.class, json);
-                Order order = resp.getData().getAs("order", Order.class);
+                PrOrder order = resp.getData().getAs("order", PrOrder.class);
                 return order;
             }
         } catch (Exception e) {
@@ -144,7 +144,7 @@ public class OrderUtil {
      * @param biz
      * @return
      */
-    public static Order fetchOrder(Integer providerId, String key, FetchOrder biz) {
+    public static PrOrder fetchOrder(Integer providerId, String key, FetchOrder biz) {
 
         try {
 
@@ -168,7 +168,7 @@ public class OrderUtil {
                 throw new Exception("返回值异常");
             } else {
                 BaseResp resp = Json.fromJson(BaseResp.class, json);
-                Order order = resp.getData().getAs("order", Order.class);
+                PrOrder order = resp.getData().getAs("order", PrOrder.class);
                 return order;
             }
         } catch (Exception e) {

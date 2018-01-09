@@ -15,7 +15,7 @@ import java.util.List;
  *
  * @author Jianghao(howechiang @ gmail.com)
  */
-public class Order {
+public class PrOrder {
 
     /**
      * 接单狗订单编号
@@ -30,6 +30,9 @@ public class Order {
         this.orderNum = orderNum;
     }
 
+    /**
+     * 合作商Id
+     */
     private Integer partnerId;
 
     public Integer getPartnerId() {
@@ -496,4 +499,16 @@ public class Order {
         this.finishedTime = finishedTime;
     }
 
+    /**
+     * 订单是否锁定
+     */
+    private Boolean isLock;
+
+    public Boolean getLock() {
+        return isLock;
+    }
+
+    public void setLock(Boolean lock) {
+        isLock = lock;
+    }
 }
