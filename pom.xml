@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.jiedangou</groupId>
     <artifactId>jdgInf-sdk</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.0</version>
     <packaging>jar</packaging>
     <name>Nutz Maven Webapp</name>
     <url>http://maven.nutz.cn</url>
@@ -20,7 +20,7 @@
         <dependency>
             <groupId>org.nutz</groupId>
             <artifactId>nutz</artifactId>
-            <version>1.r.65-SNAPSHOT</version>
+            <version>1.r.65</version>
         </dependency>
     </dependencies>
 
@@ -93,6 +93,14 @@
                         <arg>-parameters</arg>
                     </compilerArgs>
                     <useIncrementalCompilation>false</useIncrementalCompilation>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>2.10.3</version>
+                <configuration>
+                    <additionalparam>-Xdoclint:none</additionalparam>
                 </configuration>
             </plugin>
         </plugins>
