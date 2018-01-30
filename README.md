@@ -2,6 +2,15 @@
 接单狗对接接口（服务商）-SDK
 
 ```
+<dependency>
+    <groupId>com.jiedangou</groupId>
+    <artifactId>jdgInf-sdk</artifactId>
+    <version>1.0.0</version>
+</dependency>
+```
+
+### 快照版
+```
 <repositories>
     <repository>
         <id>nutz</id>
@@ -26,6 +35,5 @@
     <groupId>com.jiedangou</groupId>
     <artifactId>jdgInf-sdk</artifactId>
     <version>1.0.0-SNAPSHOT</version>
-    <scope>test</scope>
 </dependency>
 ```
