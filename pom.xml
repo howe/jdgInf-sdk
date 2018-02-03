@@ -7,8 +7,10 @@
     <artifactId>jdgInf-sdk</artifactId>
     <version>1.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
-    <name>Nutz Maven Webapp</name>
-    <url>http://maven.nutz.cn</url>
+    <name>接单狗对接接口（合作商）- SDK</name>
+    <url>https://github.com/howe/jdgInf-sdk</url>
+
+    <description>接单狗电竞服务平台</description>
 
     <description>Jiedangou is a walkthrough platform</description>
 
