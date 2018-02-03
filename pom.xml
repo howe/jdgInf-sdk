@@ -12,8 +12,6 @@
 
     <description>接单狗电竞服务平台</description>
 
-    <description>Jiedangou is a walkthrough platform</description>
-
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
