@@ -9,6 +9,8 @@ public class Dict {
 
     public static String JDG_API_VERSION = "1.0";
     public static final String DATE_FORMART_FULL = "yyyy-MM-dd HH:mm:ss";
+    public static final String DATE_CHINA_TIMEZONE = "GMT+8";
+
     public static String JDG_API_HOST = "https://inf.jiedangou.com";
     public static String JDG_DEV_API_HOST = "https://inf.dev.jiedangou.com";
 

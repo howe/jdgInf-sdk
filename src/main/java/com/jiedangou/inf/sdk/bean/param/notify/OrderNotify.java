@@ -21,7 +21,7 @@ public class OrderNotify {
 
     private String sign;
 
-    @JsonField(dataFormat = Dict.DATE_FORMART_FULL)
+    @JsonField(dataFormat = Dict.DATE_FORMART_FULL, timeZone = Dict.DATE_CHINA_TIMEZONE)
     private Date notifyTime;
 
     private String notifyType;
