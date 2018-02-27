@@ -102,7 +102,6 @@ public class PrOrder {
      * 14 已完成
      * 15 被动撤销中（号主）
      * 88 已结算
-     * 99 已完结
      */
     private Integer orderStatus;
 
@@ -375,6 +374,19 @@ public class PrOrder {
 
     public void setOms(List<OMessage> oms) {
         this.oms = oms;
+    }
+
+    /**
+     * 是否完结
+     */
+    private Boolean isFinished;
+
+    public Boolean getFinished() {
+        return isFinished;
+    }
+
+    public void setFinished(Boolean finished) {
+        isFinished = finished;
     }
 
     /**
