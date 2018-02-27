@@ -31,7 +31,7 @@ public class PrOrder {
     }
 
     /**
-     * 合作商Id
+     * 合作商ID
      */
     private Integer partnerId;
 
@@ -41,6 +41,19 @@ public class PrOrder {
 
     public void setPartnerId(Integer partnerId) {
         this.partnerId = partnerId;
+    }
+
+    /**
+     * 合作商订单号
+     */
+    private String outOrderNum;
+
+    public String getOutOrderNum() {
+        return outOrderNum;
+    }
+
+    public void setOutOrderNum(String outOrderNum) {
+        this.outOrderNum = outOrderNum;
     }
 
     /**
@@ -77,7 +90,7 @@ public class PrOrder {
      * 2 已接单（未处理）
      * 3 处理中（代练中）
      * 4 待验收
-     * 5 撤销中
+     * 5 主动撤销中（打手）
      * 6 仲裁中
      * 7 异常
      * 8 锁定
@@ -87,6 +100,7 @@ public class PrOrder {
      * 12 强制仲裁
      * 13 申述中（服务商申述）
      * 14 已完成
+     * 15 被动撤销中（号主）
      * 88 已结算
      * 99 已完结
      */
@@ -100,6 +114,9 @@ public class PrOrder {
         this.orderStatus = orderStatus;
     }
 
+    /**
+     * 游戏ID
+     */
     private Integer gameId;
 
     public Integer getGameId() {
@@ -123,6 +140,9 @@ public class PrOrder {
         this.gameName = gameName;
     }
 
+    /**
+     * 渠道ID
+     */
     private Integer channelId;
 
     public Integer getChannelId() {
@@ -147,6 +167,19 @@ public class PrOrder {
     }
 
     /**
+     * 服务器ID
+     */
+    private Integer serverId;
+
+    public Integer getServerId() {
+        return serverId;
+    }
+
+    public void setServerId(Integer serverId) {
+        this.serverId = serverId;
+    }
+
+    /**
      * 服务器名称
      */
     private String serverName;
@@ -157,16 +190,6 @@ public class PrOrder {
 
     public void setServerName(String serverName) {
         this.serverName = serverName;
-    }
-
-    private Integer serverId;
-
-    public Integer getServerId() {
-        return serverId;
-    }
-
-    public void setServerId(Integer serverId) {
-        this.serverId = serverId;
     }
 
     /**
@@ -485,7 +508,7 @@ public class PrOrder {
     }
 
     /**
-     * 订单是否锁定
+     * 订单锁定状态
      */
     private Boolean isLock;
 
@@ -495,5 +518,32 @@ public class PrOrder {
 
     public void setLock(Boolean lock) {
         isLock = lock;
+    }
+
+    /**
+     * 订单来源
+     */
+    private String orderSource;
+
+    public String getOrderSource() {
+        return orderSource;
+    }
+
+    public void setOrderSource(String orderSource) {
+        this.orderSource = orderSource;
+    }
+
+    /**
+     * 订单处理
+     */
+    private String orderReceive;
+
+    public String getOrderReceive() {
+        return orderReceive;
+    }
+
+    public void setOrderReceive(String orderReceive) {
+        this.orderReceive = orderReceive;
+
     }
 }
