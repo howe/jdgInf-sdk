@@ -427,33 +427,18 @@ public class PrOrder {
     }
 
     /**
-     * 安全赔偿金额
+     * 赔偿金额
      * 保留2位小数
      * 单位 元
      */
-    private Double safetyComp;
+    private Double orderDamage;
 
-    public Double getSafetyComp() {
-        return safetyComp;
+    public Double getOrderDamage() {
+        return orderDamage;
     }
 
-    public void setSafetyComp(Double safetyComp) {
-        this.safetyComp = safetyComp;
-    }
-
-    /**
-     * 效率赔偿金额
-     * 保留2位小数
-     * 单位 元
-     */
-    private Double efficiencyComp;
-
-    public Double getEfficiencyComp() {
-        return efficiencyComp;
-    }
-
-    public void setEfficiencyComp(Double efficiencyComp) {
-        this.efficiencyComp = efficiencyComp;
+    public void setOrderDamage(Double orderDamage) {
+        this.orderDamage = orderDamage;
     }
 
     /**
