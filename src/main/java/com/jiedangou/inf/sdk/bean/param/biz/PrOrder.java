@@ -235,31 +235,29 @@ public class PrOrder {
 
     /**
      * 安全保证金
-     * 保留2位小数
-     * 单位 元
+     * 单位 分
      */
-    private Double safetyMargin;
+    private int safetyMargin;
 
-    public Double getSafetyMargin() {
+    public int getSafetyMargin() {
         return safetyMargin;
     }
 
-    public void setSafetyMargin(Double safetyMargin) {
+    public void setSafetyMargin(int safetyMargin) {
         this.safetyMargin = safetyMargin;
     }
 
     /**
      * 效率保证金
-     * 保留2位小数
-     * 单位 元
+     * 单位 分
      */
-    private Double efficiencyMargin;
+    private int efficiencyMargin;
 
-    public Double getEfficiencyMargin() {
+    public int getEfficiencyMargin() {
         return efficiencyMargin;
     }
 
-    public void setEfficiencyMargin(Double efficiencyMargin) {
+    public void setEfficiencyMargin(int efficiencyMargin) {
         this.efficiencyMargin = efficiencyMargin;
     }
 
@@ -267,13 +265,13 @@ public class PrOrder {
      * 订单要求完成时间
      * 单位 小时
      */
-    private Integer requiredCompleteTime;
+    private int requiredCompleteTime;
 
-    public Integer getRequiredCompleteTime() {
+    public int getRequiredCompleteTime() {
         return requiredCompleteTime;
     }
 
-    public void setRequiredCompleteTime(Integer requiredCompleteTime) {
+    public void setRequiredCompleteTime(int requiredCompleteTime) {
         this.requiredCompleteTime = requiredCompleteTime;
     }
 
@@ -379,9 +377,9 @@ public class PrOrder {
     /**
      * 是否完结
      */
-    private Boolean isFinished;
+    private boolean isFinished;
 
-    public Boolean getFinished() {
+    public boolean getFinished() {
         return isFinished;
     }
 
@@ -433,61 +431,57 @@ public class PrOrder {
 
     /**
      * 订单外放金额
-     * 保留2位小数
-     * 单位 元
+     * 单位 分
      */
-    private Double orderPrice;
+    private int orderPrice;
 
-    public Double getOrderPrice() {
+    public int getOrderPrice() {
         return orderPrice;
     }
 
-    public void setOrderPrice(Double orderPrice) {
+    public void setOrderPrice(int orderPrice) {
         this.orderPrice = orderPrice;
     }
 
     /**
      * 订单奖励金额
-     * 保留2位小数
-     * 单位 元
+     * 单位 分
      */
-    private Double orderAward;
+    private int orderAward;
 
-    public Double getOrderAward() {
+    public int getOrderAward() {
         return orderAward;
     }
 
-    public void setOrderAward(Double orderAward) {
+    public void setOrderAward(int orderAward) {
         this.orderAward = orderAward;
     }
 
     /**
      * 赔偿金额
-     * 保留2位小数
-     * 单位 元
+     * 单位 分
      */
-    private Double orderDamage;
+    private int orderDamage;
 
-    public Double getOrderDamage() {
+    public int getOrderDamage() {
         return orderDamage;
     }
 
-    public void setOrderDamage(Double orderDamage) {
+    public void setOrderDamage(int orderDamage) {
         this.orderDamage = orderDamage;
     }
 
     /**
      * 订单实际结算金额
-     * 保留2位小数
-     * 单位 元
+     * 单位 分
      */
-    private Double orderSettle;
+    private int orderSettle;
 
-    public Double getOrderSettle() {
+    public int getOrderSettle() {
         return orderSettle;
     }
 
-    public void setOrderSettle(Double orderSettle) {
+    public void setOrderSettle(int orderSettle) {
         this.orderSettle = orderSettle;
     }
 
@@ -522,13 +516,13 @@ public class PrOrder {
     /**
      * 订单锁定状态
      */
-    private Boolean isLock;
+    private boolean isLock;
 
-    public Boolean getLock() {
+    public boolean getLock() {
         return isLock;
     }
 
-    public void setLock(Boolean lock) {
+    public void setLock(boolean lock) {
         isLock = lock;
     }
 

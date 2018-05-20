@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.jiedangou</groupId>
     <artifactId>jdgInf-sdk</artifactId>
-    <version>1.0.1-SNAPSHOT</version>
+    <version>1.0.1</version>
     <packaging>jar</packaging>
     <name>接单狗对接接口（合作商）- SDK</name>
     <url>https://github.com/howe/jdgInf-sdk</url>

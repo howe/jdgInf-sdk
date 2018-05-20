@@ -11,9 +11,17 @@ public class ApplycancelOrder {
 
     private String orderNum;
 
-    private Double recoup;
+    /**
+     * 需支付的赔偿金
+     * 单位 分
+     */
+    private int recoup;
 
-    private Double reward;
+    /**
+     * 需收取的报酬
+     * 单位 分
+     */
+    private int reward;
 
     private String payPassword;
 
@@ -27,19 +35,19 @@ public class ApplycancelOrder {
         this.orderNum = orderNum;
     }
 
-    public Double getRecoup() {
+    public int getRecoup() {
         return recoup;
     }
 
-    public void setRecoup(Double recoup) {
+    public void setRecoup(int recoup) {
         this.recoup = recoup;
     }
 
-    public Double getReward() {
+    public int getReward() {
         return reward;
     }
 
-    public void setReward(Double reward) {
+    public void setReward(int reward) {
         this.reward = reward;
     }
 
@@ -59,7 +67,7 @@ public class ApplycancelOrder {
         this.om = om;
     }
 
-    public ApplycancelOrder(String orderNum, Double recoup, Double reward, String payPassword, OMessage om) {
+    public ApplycancelOrder(String orderNum, int recoup, int reward, String payPassword, OMessage om) {
         this.orderNum = orderNum;
         this.recoup = recoup;
         this.reward = reward;
