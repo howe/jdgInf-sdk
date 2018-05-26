@@ -9,16 +9,16 @@ import com.jiedangou.inf.sdk.bean.param.pro.OMessage;
  */
 public class BeginOrder {
 
-    private String orderNum;
+    private String orderNo;
 
     private OMessage om;
 
-    public String getOrderNum() {
-        return orderNum;
+    public String getOrderNo() {
+        return orderNo;
     }
 
     public void setOrderNum(String orderNum) {
-        this.orderNum = orderNum;
+        this.orderNo = orderNo;
     }
 
     public OMessage getOm() {
@@ -29,8 +29,8 @@ public class BeginOrder {
         this.om = om;
     }
 
-    public BeginOrder(String orderNum, OMessage om) {
-        this.orderNum = orderNum;
+    public BeginOrder(String orderNo, OMessage om) {
+        this.orderNo = orderNo;
         this.om = om;
     }
 

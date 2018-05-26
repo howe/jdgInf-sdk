@@ -7,31 +7,31 @@ package com.jiedangou.inf.sdk.bean.param.req.biz;
  */
 public class AcceptOrder {
 
-    private String orderNum;
+    private String orderNo;
 
-    private String pOrderNum;
+    private String pOrderNo;
 
-    public String getOrderNum() {
-        return orderNum;
+    public String getOrderNo() {
+        return orderNo;
     }
 
-    public void setOrderNum(String orderNum) {
-        this.orderNum = orderNum;
+    public void setOrderNo(String orderNo) {
+        this.orderNo = orderNo;
     }
 
-    public String getpOrderNum() {
-        return pOrderNum;
+    public String getpOrderNo() {
+        return pOrderNo;
     }
 
-    public void setpOrderNum(String pOrderNum) {
-        this.pOrderNum = pOrderNum;
+    public void setpOrderNo(String pOrderNum) {
+        this.pOrderNo = pOrderNo;
     }
 
     public AcceptOrder() {
     }
 
-    public AcceptOrder(String orderNum, String pOrderNum) {
-        this.orderNum = orderNum;
-        this.pOrderNum = pOrderNum;
+    public AcceptOrder(String orderNo, String pOrderNo) {
+        this.orderNo = orderNo;
+        this.pOrderNo = pOrderNo;
     }
 }

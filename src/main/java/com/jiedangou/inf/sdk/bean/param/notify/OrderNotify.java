@@ -30,7 +30,7 @@ public class OrderNotify {
 
     private String pOrderNum;
 
-    private Double addMoney;
+    private Integer addMoney;
 
     private Integer addTime;
 
@@ -38,11 +38,11 @@ public class OrderNotify {
 
     private OMessage om;
 
-    private Double efficiencyComp;
+    private Integer efficiencyComp;
 
-    private Double safetyComp;
+    private Integer safetyComp;
 
-    private Double orderSettle;
+    private Integer orderSettle;
 
     public Integer getProviderId() {
         return providerId;
@@ -108,11 +108,11 @@ public class OrderNotify {
         this.pOrderNum = pOrderNum;
     }
 
-    public Double getAddMoney() {
+    public Integer getAddMoney() {
         return addMoney;
     }
 
-    public void setAddMoney(Double addMoney) {
+    public void setAddMoney(Integer addMoney) {
         this.addMoney = addMoney;
     }
 
@@ -140,27 +140,27 @@ public class OrderNotify {
         this.om = om;
     }
 
-    public Double getEfficiencyComp() {
+    public Integer getEfficiencyComp() {
         return efficiencyComp;
     }
 
-    public void setEfficiencyComp(Double efficiencyComp) {
+    public void setEfficiencyComp(Integer efficiencyComp) {
         this.efficiencyComp = efficiencyComp;
     }
 
-    public Double getSafetyComp() {
+    public Integer getSafetyComp() {
         return safetyComp;
     }
 
-    public void setSafetyComp(Double safetyComp) {
+    public void setSafetyComp(Integer safetyComp) {
         this.safetyComp = safetyComp;
     }
 
-    public Double getOrderSettle() {
+    public Integer getOrderSettle() {
         return orderSettle;
     }
 
-    public void setOrderSettle(Double orderSettle) {
+    public void setOrderSettle(Integer orderSettle) {
         this.orderSettle = orderSettle;
     }
 }

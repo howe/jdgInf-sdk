@@ -20,14 +20,14 @@ public class PrOrder {
     /**
      * 接单狗订单编号
      */
-    private String orderNum;
+    private String orderNo;
 
-    public String getOrderNum() {
-        return orderNum;
+    public String getOrderNo() {
+        return orderNo;
     }
 
-    public void setOrderNum(String orderNum) {
-        this.orderNum = orderNum;
+    public void setOrderNo(String orderNo) {
+        this.orderNo = orderNo;
     }
 
     /**
@@ -46,27 +46,27 @@ public class PrOrder {
     /**
      * 合作商订单号
      */
-    private String outOrderNum;
+    private String outOrderNo;
 
-    public String getOutOrderNum() {
-        return outOrderNum;
+    public String getOutOrderNo() {
+        return outOrderNo;
     }
 
-    public void setOutOrderNum(String outOrderNum) {
-        this.outOrderNum = outOrderNum;
+    public void setOutOrderNo(String outOrderNo) {
+        this.outOrderNo = outOrderNo;
     }
 
     /**
      * 服务商订单号
      */
-    private String pOrderNum;
+    private String pOrderNo;
 
-    public String getpOrderNum() {
-        return pOrderNum;
+    public String getpOrderNo() {
+        return pOrderNo;
     }
 
-    public void setpOrderNum(String pOrderNum) {
-        this.pOrderNum = pOrderNum;
+    public void setpOrderNo(String pOrderNo) {
+        this.pOrderNo = pOrderNo;
     }
 
     /**
@@ -379,7 +379,7 @@ public class PrOrder {
      */
     private boolean isFinished;
 
-    public boolean getFinished() {
+    public boolean isFinished() {
         return isFinished;
     }
 
@@ -518,7 +518,7 @@ public class PrOrder {
      */
     private boolean isLock;
 
-    public boolean getLock() {
+    public boolean isLock() {
         return isLock;
     }
 
